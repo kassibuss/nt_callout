@@ -14,29 +14,28 @@ public Plugin myinfo = {
     version     = PLUGIN_VERSION,
     url         = "https://github.com/kassibuss/nt_callout"
 }
-
 public void OnPluginStart()
 {
-  new Float:vec[3]
+  	new float vec[3]
 	g_hCvar_TogglePanel=CreateConvar("sm_togglepanel", Cmd_TogglePanel)
 	}
 		for (int client = 1; client <= MaxClients; ++client)
-	{
+		{
 		if (!IsClientInGame(client) || IsFakeClient(client))
 		{
 			continue;
-		}
+	}
 
 
 	AutoExecConfig();
 
-  cookiesEnabled = (GetExtensionFileStatus("clientprefs.ext") == 1);
+  	cookiesEnabled = (GetExtensionFileStatus("clientprefs.ext") == 1);
 	
 	if (cookiesEnabled) {
 	//TO DO
 	} 
 
-  public OnClientCookiesCached(client)
+public OnClientCookiesCached(client)
 {
 	if (IsClientInGame(client)) {
 		ClientIngameAndCookiesCached(client);
@@ -55,7 +54,7 @@ public OnClientConnected(client)
 	enabledForClient[client] = true;
 }
 
-	public void OnPlayerSpawn
+public void OnPlayerSpawn
 {
 	
     Panel panel = new Panel();
