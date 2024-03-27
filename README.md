@@ -1,2 +1,2 @@
 # nt_callout
-Adds a panel to the players screen which shows the callout of the current location of the player
+Adds callouts in front of the players name in chat for easier communication. WIP
